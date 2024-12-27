@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 phoneField.classList.add('is-valid');
             }
 
+            
+
             // checar todos los campos segun reglas html
             if (!form.checkValidity()) {
                 // evitar que se envie si ha fallado una verifiacion
@@ -45,8 +47,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 formData.forEach((value, key) => { json[key] = value; });
 
                 // Mostrar el JSON generado en la página
-                document.getElementById('jsonOutput').innerHTML =
-                    `<pre>${JSON.stringify(json, null, 2)}</pre>`;
+                document.getElementById('jsonOutput').innerHTML = 
+                `<pre>${syntaxHighlight(JSON.stringify(json, null, 2))}</pre>`;
+
+                // diferenciar parametro y valor por colores
+                function syntaxHighlight(json) {
+                    return json.replace(/"(.*?)":/g, function(match, p1) {
+                        return `<span style="color: #E65400;">"${p1}":</span>`;  // Color para las propiedades
+                    })
+                }
 
                 // Enviar el JSON al API
                 fetch('http://localhost:5183/api/miinfo/mi-info', {

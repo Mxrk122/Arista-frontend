@@ -28,3 +28,4 @@ C:\Users\Mark\Documents\Chamba\Arista\Landing\LandingPage\obj\Debug\net8.0\refin
 C:\Users\Mark\Documents\Chamba\Arista\Landing\LandingPage\obj\Debug\net8.0\LandingPage.pdb
 C:\Users\Mark\Documents\Chamba\Arista\Landing\LandingPage\obj\Debug\net8.0\LandingPage.genruntimeconfig.cache
 C:\Users\Mark\Documents\Chamba\Arista\Landing\LandingPage\obj\Debug\net8.0\ref\LandingPage.dll
+C:\Users\Mark\Documents\Chamba\Arista\Landing\LandingPage\obj\Debug\net8.0\LandingPage.sourcelink.json

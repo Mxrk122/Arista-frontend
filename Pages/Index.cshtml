@@ -5,14 +5,13 @@
 }
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
 
 <div class="container mt-5">
     <h1 class="text-center mb-4">Formulario de Contacto</h1>
     <p class="text-center mb-4">Checar respuesta del API en consola</p>
 
-    <!-- Contenedor con Flexbox -->
     <div class="d-flex justify-content-between">
-        <!-- Formulario de contacto -->
         <div class="w-50">
             <form id="contactForm" method="post" class="needs-validation" novalidate>
                 <div class="mb-3">
@@ -47,7 +46,7 @@
 
                 <div class="mb-3">
                     <label for="postalCode" class="form-label">Código postal*</label>
-                    <input type="number" class="form-control" id="postalCode" name="PostalCode" minlength="5" maxlength="5" required>
+                    <input type="text" class="form-control" pattern="[0-9]{5}" placeholder="(5 dígitos)" id="postalCode" name="PostalCode" minlength="5" maxlength="5" required>
                     <div class="invalid-feedback">Introduce un código postal válido.</div>
                 </div>
 
@@ -59,7 +58,6 @@
                         <option value="Estados Unidos">Estados Unidos</option>
                         <option value="Canadá">Canadá</option>
                         <option value="España">España</option>
-                        <option value="Argentina">Argentina</option>
                         <option value="Guatemala">Guatemala</option>
                     </select>
                     <div class="invalid-feedback">Selecciona un país.</div>
@@ -75,8 +73,8 @@
             </form>
         </div>
 
-        <!-- Sección para mostrar el JSON -->
-        <div class="w-50">
+        
+        <div class="w-50 json-section">
             <h1 class="text-center mb-4">JSON</h1>
             <div id="jsonOutput" class="mt-4">
                 <!-- Aquí se mostrará el JSON generado -->
